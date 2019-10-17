@@ -1,0 +1,61 @@
+######################################################################################################
+###alpha correlation with nutrient &VFA
+a=read.delim("otu_table_new3.csv", header=T, sep=",")
+set.seed(111)
+for (k in 3:20){
+d1=a[,c(k,21:24)]
+ 
+x=d1[[1]]
+AA=lapply(d1[,-1], cor.test, x = x, method = "pearson") ##pearson correlation
+B=do.call(rbind,lapply(AA,function(v){v$estimate}))
+C=do.call(rbind,lapply(AA,function(v){v$p.value}))
+result=cbind(B,C);colnames(result)=c('coef','pvalue')
+#write.csv(result, "Propionate.csv")
+  form = sprintf('alpha_%s.csv', k)
+  write.csv(result, file = form) 
+
+}
+#####################################################################################################################
+###VFA-nutrient cor
+a=read.delim("otu_table_new3.csv", header=T, sep=",")
+set.seed(111)
+for (k in 3:10){
+d1=a[,c(k,10:20)]
+ 
+x=d1[[1]]
+AA=lapply(d1[,-1], cor.test, x = x, method = "pearson") ##pearson correlation
+B=do.call(rbind,lapply(AA,function(v){v$estimate}))
+C=do.call(rbind,lapply(AA,function(v){v$p.value}))
+result=cbind(B,C);colnames(result)=c('coef','pvalue')
+#write.csv(result, "Propionate.csv")
+  form = sprintf('VFA_%s.csv', k)
+  write.csv(result, file = form) 
+
+}
+######################################################################
+##calculate pval of all otus
+
+
+a2=read.delim("otu_table_new3.csv", header=T, sep=",")
+a=a2[,c(1,24:861)] 
+x=c()
+for(i in 2:839){
+x[i]=kruskal.test(a[,i]~ trt,data=a)$p.value 
+}
+sig <- data.frame(matrix(ncol = 5, nrow = 838))
+sig[,1]=colnames(a)[2:839]
+sig[,2]=x[2:839]
+
+
+df <- data.frame(matrix(ncol = 839, nrow = 3))
+for(k in 2:839){
+means<- aggregate(data.matrix(a[,k])~ trt, a, mean)
+df[,k]=means[,2]
+}
+df[,1]=means[,1]
+
+df1=as.data.frame(t(df[,2:839]))
+
+sig[,3:5]=df1[,1:3]
+colnames(sig)=c('OTUID','pvalue-KWtest', 'MCA',  'MRC','MRO')
+write.csv(sig,'OTU-sig.csv')
