@@ -1,8 +1,6 @@
 
 
 require(FishTacoPlot); require(ggplot2); require(scales); require(grid)
-
-install.packages("C:/Users/chaij/Downloads/fishtaco-plot-1.0.1.tar.gz", repos = NULL, type="source")
 library(devtools)
 install_github("borenstein-lab/fishtaco-plot") 
 ##########################################################33
@@ -10,8 +8,8 @@ install_github("borenstein-lab/fishtaco-plot")
 fishtaco_out_main_output_SCORE_wilcoxon_ASSESSMENT_multi_taxa
 
 ####L3 MRO--MCA
-p <- MultiFunctionTaxaContributionPlots(input_dir="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MCA", input_prefix="fishtaco_out",
-input_taxa_taxonomy="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MCA/taxnomy333.txt", input_permutation="single_taxa",sort_by="list", plot_type="bars",
+p <- MultiFunctionTaxaContributionPlots(input_dir="/data/MRO-MCA", input_prefix="fishtaco_out",
+input_taxa_taxonomy="/data/MRO-MCA/taxnomy333.txt", input_permutation="single_taxa",sort_by="list", plot_type="bars",
 input_function_filter_list=c("ABC_transporters",'Biosynthesis_of_unsaturated_fatty_acids','Carbohydrate_metabolism','Insulin_signaling_pathway','Lipid_metabolism','Selenocompound_metabolism'), 
 min_cont_as_separate=0.025,add_predicted_da_markers=TRUE)
 
@@ -31,7 +29,7 @@ ggsave <- ggplot2::ggsave; body(ggsave) <- body(ggplot2::ggsave)[-2]
 ggsave("FishTaco_T2D.png", p, width=11.8, height=6.07, units="in")
 ####################################
 #make plot of last pathway
-p <- MultiFunctionTaxaContributionPlots(input_dir="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MCA", input_prefix="fishtaco_out",
+p <- MultiFunctionTaxaContributionPlots(input_dir="/data/MRO-MCA", input_prefix="fishtaco_out",
 input_taxa_taxonomy="taxonomy33.txt", sort_by="list", plot_type="bars",
 input_function_filter_list=c("Arachidonic_acid_metabolism",'Carbohydrate_metabolism','Flavone_and_flavonol_biosynthesis','Lipid_metabolism','Renal_cell_carcinoma',
 'Signal_transduction_mechanisms','Vibrio_cholerae_pathogenic_cycle','Meiosis___yeast','Transporters','Ethylbenzene_degradation','Bacterial_motility_proteins','Glycosyltransferases',
@@ -52,8 +50,8 @@ p
 
 #######################################################
 ####L3 MRO--Mrc
-p <- MultiFunctionTaxaContributionPlots(input_dir="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MRC", input_prefix="fishtaco_out",
-input_taxa_taxonomy="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MRC/taxnomy333.txt", input_permutation="single_taxa",sort_by="list", plot_type="bars",
+p <- MultiFunctionTaxaContributionPlots(input_dir="/data/MRO-MRC", input_prefix="fishtaco_out",
+input_taxa_taxonomy="/data/MRO-MRC/taxnomy333.txt", input_permutation="single_taxa",sort_by="list", plot_type="bars",
 input_function_filter_list=c("Transporters",'Biosynthesis_of_unsaturated_fatty_acids','Carbohydrate_digestion_and_absorption','Carbohydrate_metabolism','Insulin_signaling_pathway','Lipid_metabolism','Selenocompound_metabolism'), 
 min_cont_as_separate=0.025,add_predicted_da_markers=TRUE)
 
@@ -68,8 +66,8 @@ legend.background=element_rect(colour="black"), legend.title=element_text(size=1
 legend.key.size=unit(0.8,"line"), legend.margin=unit(0.1,"line"), legend.position="bottom")
 p
 ##########################
-p <- MultiFunctionTaxaContributionPlots(input_dir="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MRC", input_prefix="fishtaco_out",
-input_taxa_taxonomy="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MRC/taxnomy333.txt",input_permutation="single_taxa",
+p <- MultiFunctionTaxaContributionPlots(input_dir="/data/MRO-MRC", input_prefix="fishtaco_out",
+input_taxa_taxonomy="/data/MRO-MRC/taxnomy333.txt",input_permutation="single_taxa",
 min_cont_as_separate=0.025,sort_by="predicted_da", plot_type="bars", add_predicted_da_markers=TRUE, add_original_da_markers=TRUE)
 p = p + scale_fill_manual(values = c("yellow2",'red','pink','purple','steelblue3','darkgreen',
 "cyan",'coral','darkred','chartreuse','darkolivegreen3','lightslateblue',"lightblue1",'mediumseagreen',
@@ -88,8 +86,8 @@ ggsave <- ggplot2::ggsave; body(ggsave) <- body(ggplot2::ggsave)[-2]
 ggsave("MRO-MRC-f.pDF", p, width=11.8, height=15, units="in")
 show_only_diff_abun_taxa=TRUE,
 ##
-p <- MultiFunctionTaxaContributionPlots(input_dir="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MCA", input_prefix="fishtaco_out",
-input_taxa_taxonomy="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MCA/taxnomy333.txt",input_permutation="single_taxa",
+p <- MultiFunctionTaxaContributionPlots(input_dir="/data/MRO-MCA", input_prefix="fishtaco_out",
+input_taxa_taxonomy="/data/MRO-MCA/taxnomy333.txt",input_permutation="single_taxa",
 min_cont_as_separate=0.025,sort_by="predicted_da", plot_type="bars", add_predicted_da_markers=TRUE, add_original_da_markers=TRUE)
 p = p + scale_fill_manual(values = c("yellow2",'red','pink','purple','steelblue3','darkgreen',
 "cyan",'coral','darkred','chartreuse','darkolivegreen3','lightslateblue',"lightblue1",'mediumseagreen',
@@ -110,8 +108,8 @@ ggsave("MRO-MRC-f.pDF", p, width=11.8, height=15, units="in")
 #######################################################################################################################################
 
 ##########new  change color manually
-p <- MultiFunctionTaxaContributionPlots(input_dir="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MCA", input_prefix="fishtaco_out",
-input_taxa_taxonomy="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MCA/taxnomy333.txt", input_permutation="single_taxa",sort_by="list", plot_type="bars",
+p <- MultiFunctionTaxaContributionPlots(input_dir="/data/MRO-MCA", input_prefix="fishtaco_out",
+input_taxa_taxonomy="/data/MRO-MCA/taxnomy333.txt", input_permutation="single_taxa",sort_by="list", plot_type="bars",
 input_function_filter_list=c("ABC_transporters",'Biosynthesis_of_unsaturated_fatty_acids','Carbohydrate_metabolism','Insulin_signaling_pathway','Lipid_metabolism','Selenocompound_metabolism'), 
 min_cont_as_separate=0.025,add_predicted_da_markers=TRUE)
 
@@ -136,8 +134,8 @@ p
 
 
 #########
-p <- MultiFunctionTaxaContributionPlots(input_dir="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MRC", input_prefix="fishtaco_out",
-input_taxa_taxonomy="E:/chai/personal/xiaokang/manuscript rumen fluid/figures for papers/new-analysis/new/MRO-MRC/taxnomy333.txt", input_permutation="single_taxa",sort_by="list", plot_type="bars",
+p <- MultiFunctionTaxaContributionPlots(input_dir="/data/MRO-MRC", input_prefix="fishtaco_out",
+input_taxa_taxonomy="/data/MRO-MRC/taxnomy333.txt", input_permutation="single_taxa",sort_by="list", plot_type="bars",
 input_function_filter_list=c("Transporters",'Biosynthesis_of_unsaturated_fatty_acids','Carbohydrate_digestion_and_absorption','Carbohydrate_metabolism','Insulin_signaling_pathway','Lipid_metabolism','Selenocompound_metabolism'), 
 min_cont_as_separate=0.025,add_predicted_da_markers=TRUE)
 

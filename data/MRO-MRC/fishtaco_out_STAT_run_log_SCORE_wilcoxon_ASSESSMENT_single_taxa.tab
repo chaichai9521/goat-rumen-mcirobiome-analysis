@@ -1,0 +1,36 @@
+# /home/jchai/.local/bin/run_fishtaco.py {'single_function_filter': None, 'permutation_mode': 'blocks', 'case_label': '1', 'multiple_hypothesis_correction': 'FDR-0.05', 'da_result_file': None, 'write_log': True, 'taxa_to_function_file': None, 'output_pref': 'fishtaco_out', 'map_function_level': 'none', 'max_da_functions_cases_controls': None, 'taxa_abun_file': 'otu_table_l6.txt', 'normalization_mode': 'scale_permuted', 'apply_inference': True, 'residual_mode': 'remove_residual', 'taxa_assessment_method': 'single_taxa', 'functional_profile_already_corrected_with_musicc': True, 'function_abun_file': 'l3_relative.txt', 'na_rep': 'NA', 'number_of_shapley_orderings_per_taxa': '5', 'perform_inference_on_ko_level': False, 'class_file': 'SampleLable.txt', 'map_function_file': None, 'score_to_compute': 'wilcoxon', 'control_label': '0', 'number_of_permutations': '100', 'max_score_cutoff': '100', 'multi_function_filter_list': None}
+#DA functions:31 #Taxa:838 #Samples:12
+0:Antigen_processing_and_presentation took 38.1503040791 seconds to run.
+1:Arachidonic_acid_metabolism took 40.0462069511 seconds to run.
+2:Biosynthesis_of_siderophore_group_nonribosomal_peptides took 40.0173180103 seconds to run.
+3:Biosynthesis_of_unsaturated_fatty_acids took 42.1125850677 seconds to run.
+4:Carbohydrate_digestion_and_absorption took 40.2954809666 seconds to run.
+5:Carbohydrate_metabolism took 40.187525034 seconds to run.
+6:Chromosome took 40.6721060276 seconds to run.
+7:Cysteine_and_methionine_metabolism took 40.9433982372 seconds to run.
+8:Cytoskeleton_proteins took 40.9084401131 seconds to run.
+9:D_Arginine_and_D_ornithine_metabolism took 41.0434999466 seconds to run.
+10:Flavonoid_biosynthesis took 41.6096758842 seconds to run.
+11:Fructose_and_mannose_metabolism took 41.7296559811 seconds to run.
+12:Glycosyltransferases took 41.9444539547 seconds to run.
+13:Insulin_signaling_pathway took 41.2974550724 seconds to run.
+14:Lipid_metabolism took 42.4462361336 seconds to run.
+15:Other_ion_coupled_transporters took 42.121062994 seconds to run.
+16:Pathways_in_cancer took 42.3724880219 seconds to run.
+17:Peptidoglycan_biosynthesis took 42.5202589035 seconds to run.
+18:Plant_pathogen_interaction took 42.4501240253 seconds to run.
+19:Progesterone_mediated_oocyte_maturation took 43.473334074 seconds to run.
+20:Prostate_cancer took 42.3824698925 seconds to run.
+21:Retinol_metabolism took 42.0434510708 seconds to run.
+22:Selenocompound_metabolism took 42.2534639835 seconds to run.
+23:Signal_transduction_mechanisms took 41.9660320282 seconds to run.
+24:Starch_and_sucrose_metabolism took 43.6206259727 seconds to run.
+25:Styrene_degradation took 42.3675189018 seconds to run.
+26:Sulfur_metabolism took 42.3889827728 seconds to run.
+27:Transcription_factors took 42.1956541538 seconds to run.
+28:Transporters took 42.2186501026 seconds to run.
+29:Vibrio_cholerae_pathogenic_cycle took 41.8794510365 seconds to run.
+30:Zeatin_biosynthesis took 42.1842567921 seconds to run.
+----------------------------------------------
+Program completed successfully with no errors.
+----------------------------------------------
